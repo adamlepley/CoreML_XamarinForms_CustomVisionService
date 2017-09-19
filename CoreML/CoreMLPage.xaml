@@ -1,11 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:local="clr-namespace:CoreML"
 	x:Class="CoreML.CoreMLPage">
-	<Label
-		Text="Welcome to Xamarin Forms!"
-		VerticalOptions="Center"
-		HorizontalOptions="Center" />
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">0,20,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button Text="Take Picture" />
+
+        <Image x:Name="image"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill"
+               Grid.Row="1" />
+    </Grid>
 </ContentPage>
