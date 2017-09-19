@@ -17,7 +17,8 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Button Text="Take Picture" />
+        <Button Text="Take Picture"
+                Clicked="Button_Clicked"/>
 
         <Image x:Name="image"
                HorizontalOptions="Fill"
