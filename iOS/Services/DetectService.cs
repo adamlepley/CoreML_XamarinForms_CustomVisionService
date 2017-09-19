@@ -7,6 +7,7 @@ using CoreImage;
 using CoreFoundation;
 using CoreML.Services;
 
+[assembly: Xamarin.Forms.Dependency(typeof(CoreML.iOS.Services.DetectService))]
 namespace CoreML.iOS.Services
 {
     public class DetectService : IDetectService
